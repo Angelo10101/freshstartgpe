@@ -5,6 +5,7 @@ import viteTsconfigPaths from "vite-tsconfig-paths";
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
 export default defineConfig({
+  base: "/freshstartgpe/",
   plugins: [
     tanstackStart(),
     react(),
