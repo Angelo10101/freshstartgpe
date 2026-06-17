@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "FreshStart"
+version = "1.0.0"
+id = "artifacts/freshstart"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 24878
+
+[services.development]
+run = "pnpm --filter @workspace/freshstart run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/freshstart", "run", "build" ]
+publicDir = "artifacts/freshstart/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "24878"
+BASE_PATH = "/"
