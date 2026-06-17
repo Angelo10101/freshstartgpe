@@ -1,39 +1,15 @@
-import { createFileRoute } from "@tanstack/react-router";
-import logo from "@/assets/freshstart-logo.png";
-import heroRoom from "@/assets/hero-room.jpg";
-import servicePainting from "@/assets/service-painting.jpg";
-import serviceGardening from "@/assets/service-gardening.jpg";
-import serviceExterior from "@/assets/service-exterior.jpg";
-
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "FreshStart — Painting & Gardening in London" },
-      {
-        name: "description",
-        content:
-          "FreshStart is a London-based painting and gardening team serving Walthamstow, Leyton and beyond. Free quotes, 5-star rated on Google.",
-      },
-      { property: "og:title", content: "FreshStart — Painting & Gardening in London" },
-      {
-        property: "og:description",
-        content:
-          "Local painters and gardeners in Walthamstow / Leyton. Free quotes — bring the fresh start into your home.",
-      },
-    ],
-  }),
-  component: Home,
-});
+import logo from "./assets/freshstart-logo.png";
+import heroRoom from "./assets/hero-room.jpg";
+import servicePainting from "./assets/service-painting.jpg";
+import serviceGardening from "./assets/service-gardening.jpg";
+import serviceExterior from "./assets/service-exterior.jpg";
 
 const PHONE = "+44 7856 322075";
 const PHONE_HREF = "tel:+447856322075";
 const ADDRESS = "86–90 Paul St, London EC2A 4NE";
-const HOURS_SCHEDULE = [
-  "9 am–10 pm,",
-  "Monday through Sunday"
-].join("\n");
+const HOURS_SCHEDULE = ["9 am–10 pm,", "Monday through Sunday"].join("\n");
 
-function Home() {
+export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Header />
@@ -166,7 +142,6 @@ function Services() {
             quote on anything you ring us about.
           </p>
         </div>
-
         <div className="mt-14 grid gap-8 md:grid-cols-3">
           {services.map((s) => (
             <article key={s.title} className="group">
@@ -343,7 +318,7 @@ function Footer() {
           </p>
         </div>
         <p className="text-xs text-muted-foreground">
-          © {new Date().getFullYear()} FreshStartGPE. All rights reserved.
+          © {new Date().getFullYear()} FreshStart. All rights reserved.
         </p>
       </div>
     </footer>
