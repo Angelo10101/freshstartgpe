@@ -1,0 +1,54 @@
+# Dependency installs
+node_modules/
+**/node_modules/
+
+# Build and framework output
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+.output/
+**/.output/
+.vinxi/
+**/.vinxi/
+.tanstack/
+**/.tanstack/
+.nitro/
+**/.nitro/
+
+# Local environment files
+*.local
+**/*.local
+.env
+.env.*
+.dev.vars
+**/.dev.vars
+
+# Cloudflare Wrangler
+.wrangler/
+**/.wrangler/
+
+# Logs
+*.log
+logs/
+**/logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Editor and OS files
+.DS_Store
+**/.DS_Store
+.idea/
+**/.idea/
+.vscode/*
+!.vscode/extensions.json
+**/.vscode/*
+!**/.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
